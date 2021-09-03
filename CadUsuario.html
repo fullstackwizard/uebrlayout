@@ -202,59 +202,54 @@
                                  </label>
                               </div>
                            </div>
-
-                           
-<style>
-
-.form-group.form-md-line-input.form-md-floating-label .form-control:focus,
-.form-group.form-md-line-input.form-md-floating-label .form-control:valid
-
- {
- top:0;
- font-size:13px
-}
-</style>
-                                                   
+                           <style>
+                              .form-group.form-md-line-input.form-md-floating-label .form-control:focus ~ .labelControl,
+                              .form-group.form-md-line-input.form-md-floating-label .form-control:valid ~ .labelControl
+                              {
+                              top:0;
+                              font-size:13px
+                              }
+                           </style>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtNome" type="text" id="txtNome" class="form-control" />
-                                 <label for="txtNome">Nome</label>
+                                 <input required name="txtNome" type="text" id="txtNome" class="form-control" />
+                                 <label class="labelControl" for="txtNome">Nome</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtLogin" type="text" id="txtLogin" class="form-control" />
-                                 <label for="txtLogin">Login</label>
+                                 <input required name="txtLogin" type="text" id="txtLogin" class="form-control" />
+                                 <label class="labelControl" for="txtLogin">Login</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtPassword" id="txtPassword" class="form-control" type="password" autocomplete="off" />
-                                 <label for="txtPassword">Senha</label>
+                                 <input required name="txtPassword" id="txtPassword" class="form-control" type="password" autocomplete="off" />
+                                 <label class="labelControl" for="txtPassword">Senha</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtRepetirPassword" id="txtRepetirPassword" class="form-control" type="password" autocomplete="off" />
-                                 <label for="txtRepetirPassword">Repetir Senha</label>
+                                 <input required name="txtRepetirPassword" id="txtRepetirPassword" class="form-control" type="password" autocomplete="off" />
+                                 <label class="labelControl" for="txtRepetirPassword">Repetir Senha</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtCpf" type="text" id="txtCpf" class="form-control" />
-                                 <label id="labelCpfCnpj">CPF</label>
+                                 <input required name="txtCpf" type="text" id="txtCpf" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" class="form-control" autocomplete="off" maxlength="14" />
+                                 <label class="labelControl" id="labelCpfCnpj">CPF</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtEmail" id="txtEmail" class="form-control" type="email" />
-                                 <label for="txtEmail">E-mail</label>
+                                 <input required name="txtEmail" id="txtEmail" class="form-control" type="email" />
+                                 <label class="labelControl" for="txtEmail">E-mail</label>
                               </div>
                            </div>
                            <div class="col-sm-6">
                               <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input name="txtContato" type="text" id="txtContato" class="form-control" />
-                                 <label for="txtContato">Contato</label>
+                                 <input required name="txtContato" type="text" id="txtContato" class="form-control" maxlength="15" />
+                                 <label class="labelControl" for="txtContato">Contato</label>
                               </div>
                            </div>
                         </div>
