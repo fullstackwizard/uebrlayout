@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--
+   Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+   Version: 4.7.5
+   Author: KeenThemes
+   Website: http://www.keenthemes.com/
+   Contact: support@keenthemes.com
+   Follow: www.twitter.com/keenthemes
+   Dribbble: www.dribbble.com/keenthemes
+   Like: www.facebook.com/keenthemes
+   Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+   Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+   License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+   -->
+<!--[if IE 8]> 
+<html lang="en" class="ie8 no-js">
+   <![endif]-->
+   <!--[if IE 9]> 
+   <html lang="en" class="ie9 no-js">
+      <![endif]-->
+      <!--[if !IE]><!-->
+      <html lang="pt-BR">
+         <!--<![endif]-->
+         <!-- BEGIN HEAD -->
+         <head>
+            <meta charset="utf-8" />
+            <title>Bem Vindo a UE Brasil</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta content="width=device-width, initial-scale=1" name="viewport" />
+            <meta content="Ellos ECM, uma suíte completa para Plataforma Digital!" name="description" />
+            <meta content="" name="author" />
+            <!-- BEGIN GLOBAL MANDATORY STYLES -->
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+            <!-- Feature UEBRASIL 03/09/2021 -->
+            <!--Sources-->
+            <link rel="stylesheet" href="css/simple-line-icons.css">
+            <link rel="stylesheet" href="css/bootstrapori.css">
+            <link rel="stylesheet" href="css/bootstrapCAD.css">
+            <link rel="stylesheet" href="css/toast.css">
+            <link rel="stylesheet" href="css/bootstrap-switch.css">
+            <link rel="stylesheet" href="css/metronic2.css">
+            <link rel="stylesheet" href="css/default2.css">
+            <style>
+               .form-group.form-md-line-input {
+               margin-bottom: 10px !important;
+               }
+               .form-group.form-md-line-input .form-control {
+               margin-bottom: 10px !important;
+               }
+               .form-group.form-md-line-input .form-control[readonly],
+               .form-group.form-md-line-input .form-control[disabled],
+               fieldset[disabled] .form-group.form-md-line-input .form-control {
+               background-color: #f0f0f0;
+               }
+               #hlCadastrarse{
+               font-size: 1.8rem;
+               }
+            </style>
+         </head>
+         <!-- END HEAD -->
+         <body class=" login">
+            <script type="text/javascript"></script>
+            <!-- BEGIN : LOGIN PAGE 5-1 -->
+            <div class="login-page">
+            <div class="row bs-reset">
+               <div id="ImgContainer" class="col-md-6 img-container bs-reset mt-login-5-bsfix" style="background-image:url(img/ImageFundoLogin.jpg);">
+                  <div class="login-bg">
+                  </div>
+               </div>
+               <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
+                  <div class="login-content" style="width:100%">
+                     <img id="ImgLogo" class="custom-logo" src="img/LogoEllos.jpg" />
+                     <div id="Grid-Login" class="login-form" style="display: none;">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="alert alert-danger display-hide">
+                                 <button class="close" data-close="alert"></button>
+                                 <span>Preencha os usuário e senha para entar no sistema</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12">
+                              <div class="input-group">
+                                 <span class="input-group-addon">
+                                 <i class="fa fa-user"></i>
+                                 </span>
+                                 <input name="txtUsuario" type="text" id="txtUsuario" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Usuário" autocomplete="off" required="required" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;txtSenha&#39;).click();return false;}} else {return true}; " />
+                              </div>
+                           </div>
+                           <div class="col-xs-12">
+                              <div class="input-group">
+                                 <span class="input-group-addon">
+                                 <i class="fa fa-lock"></i>
+                                 </span>
+                                 <input name="txtSenha" type="password" id="txtSenha" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Senha" autocomplete="off" required="required" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;btnLogin&#39;).click();return false;}} else {return true}; " />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-6 col-md-5">
+                              <div class="rem-password">
+                                 <label class="rememberme mt-checkbox mt-checkbox-outline">
+                                 <input id="chkRememberMe" type="checkbox" name="chkRememberMe" />
+                                 Manter Conectado
+                                 <span></span>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-7 text-right">
+                              <a id="btnQrCode" class="btn btn-qrcode "><span class="fa fa-qrcode"></span></a>
+                              <input type="submit" name="btnLogin" value="Entrar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnLogin" class="btn btn-login" />
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-2"></div>
+                           <div class="col-xs-10 text-right">
+                              <a id="HyperLink1" class="link-forget-password">Não lembro minha senha</a>
+                              <br />
+                              <a href="CadUsuario.html" id="hlCadastrarse" class="link-cadastrar-se">Não sou cadastrado</a>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12 text-center">
+                           </div>
+                        </div>
+                     </div>
+                     <div id="Grid-QrCode" class="login-form" style="display: none">
+                        <h3 class="font-green">Acesso Ellos Mobile</h3>
+                        <div class="row">
+                           <div class="col-xs-12">
+                              <img src="#" id="imgQrCode" style="display: none" />
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12 text-right">
+                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="Grid-ForgetPassword" class="login-form" style="display: none;">
+                        <h3 class="font-green">Recuperar senha</h3>
+                        <div class="row">
+                           <div class="col-xs-12">
+                              <div class="input-group">
+                                 <span class="input-group-addon">
+                                 <i class="fa fa-user"></i>
+                                 </span>
+                                 <input name="txtRecuperarUsuario" type="text" id="txtRecuperarUsuario" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Usuário" autocomplete="off" required="required" />
+                              </div>
+                           </div>
+                           <div class="col-xs-12">
+                              <div class="input-group">
+                                 <span class="input-group-addon">
+                                 <i class="fa fa-lock"></i>
+                                 </span>
+                                 <input name="txtRecuperarEmail" type="email" id="txtRecuperarEmail" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="E-mail" autocomplete="off" required="required" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12 text-right">
+                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
+                              <input type="submit" name="btnRecuperarSenha" value="Enviar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnRecuperarSenha&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRecuperarSenha" class="btn btn-login" />
+                           </div>
+                        </div>
+                     </div>
+                     <div id="Grid-TrocarSenha" class="login-form" style="display: none;">
+                        <h3 class="font-green">Trocar senha</h3>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input name="txtNovoPassword" id="txtNovoPassword" class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeHolder="Senha" />
+                           </div>
+                           <div class="col-md-12">
+                              <input name="txtRepetirNovoPassword" id="txtRepetirNovoPassword" class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeHolder="Repetir senha" />
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
+                              <input type="submit" name="btnSalvarNovoPassword" value="Salvar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSalvarNovoPassword&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSalvarNovoPassword" class="btn btn-login" />
+                           </div>
+                        </div>
+                     </div>
+                     <div id="Grid-Cadastrarse" class="login-form" style="">
+                        <h3 class="font-green">Cadastro de Usuário</h3>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <span id="Label8">Tipo Escolar</span>
+                              <div class="mt-radio-inline js-container-tipo-pessoa">
+                                 <label class="mt-radio">
+                                 Ensino Médio
+                                 <input id="rbtTipoPessoaF" type="radio" name="tipoPessoa" value="rbtTipoPessoaF" checked="checked" />
+                                 <span></span>
+                                 </label>
+                                 <label class="mt-radio">
+                                 Ensino Superior
+                                 <input id="rbtTipoPessoaJ" type="radio" name="tipoPessoa" value="rbtTipoPessoaJ" />
+                                 <span></span>
+                                 </label>
+                              </div>
+                           </div>
+
+                           
+<style>
+
+.form-group.form-md-line-input.form-md-floating-label .form-control:focus,
+.form-group.form-md-line-input.form-md-floating-label .form-control:valid
+
+ {
+ top:0;
+ font-size:13px
+}
+</style>
+                                                   
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtNome" type="text" id="txtNome" class="form-control" />
+                                 <label for="txtNome">Nome</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtLogin" type="text" id="txtLogin" class="form-control" />
+                                 <label for="txtLogin">Login</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtPassword" id="txtPassword" class="form-control" type="password" autocomplete="off" />
+                                 <label for="txtPassword">Senha</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtRepetirPassword" id="txtRepetirPassword" class="form-control" type="password" autocomplete="off" />
+                                 <label for="txtRepetirPassword">Repetir Senha</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtCpf" type="text" id="txtCpf" class="form-control" />
+                                 <label id="labelCpfCnpj">CPF</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtEmail" id="txtEmail" class="form-control" type="email" />
+                                 <label for="txtEmail">E-mail</label>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="form-group form-md-line-input form-md-floating-label">
+                                 <input name="txtContato" type="text" id="txtContato" class="form-control" />
+                                 <label for="txtContato">Contato</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row js-container-endereco" style="display: none;">
+                           <div class="col-xs-12">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtNomeEndereco" type="text" id="txtNomeEndereco" class="form-control" />
+                                       <label for="txtContato">Nome endereço</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-sm-5 col-md-3">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtCep" type="text" id="txtCep" class="form-control" />
+                                       <label for="txtCep">CEP</label>
+                                       <input name="idBairro" type="text" id="idBairro" style="display: none;" />
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-7 col-md-5">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtEndereco" type="text" id="txtEndereco" class="form-control" />
+                                       <label for="txtEndereco">Endereço</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtNumero" type="number" id="txtNumero" class="form-control" />
+                                       <label for="txtNumero">Número</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtBairro" type="text" id="txtBairro" disabled="disabled" class="aspNetDisabled form-control" />
+                                       <label for="txtBairro">Bairro</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-5">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtCidade" type="text" id="txtCidade" disabled="disabled" class="aspNetDisabled form-control" />
+                                       <label for="txtCidade">Cidade</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtEstado" type="text" id="txtEstado" disabled="disabled" class="aspNetDisabled form-control" />
+                                       <label for="txtEstado">Estado</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtComplemento" type="text" id="txtComplemento" class="form-control" />
+                                       <label for="txtComplemento">Complemento</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group form-md-line-input form-md-floating-label">
+                                       <input name="txtReferencia" type="text" id="txtReferencia" class="form-control" />
+                                       <label for="txtReferencia">Referência</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row js-container-anexo" style="display: none;">
+                           <div class="col-xs-12">
+                              <div class="col-md-12">
+                                 <div class="form-group form-md-line-input has-info">
+                                    <span class="btn fileinput-button">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Add Anexo</span>
+                                    <input type="file" name="fileAnexo" id="fileAnexo" accept=".png, .jpg, .jpeg .pdf" />
+                                    </span>
+                                    <span id="rexp" style="visibility:hidden;">Apenas Imagens e arquivos pdf</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ">
+                           <div class="alert alert-warning">
+                              <strong>Confirmação! </strong>Você receberá um email com os dados de acesso.
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12 text-right">
+                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
+                              <input type="submit" name="btnSalvarUsu" value="Salvar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSalvarUsu&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSalvarUsu" class="btn btn-login" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="login-footer">
+                     <div class="row bs-reset">
+                        <div class="col-xs-12 bs-reset">
+                           <div class="login-copyright text-center">
+                              <p>
+                                 Ellos ECM
+                                 <span id="lblVersao">6.98.03</span>.
+                                 Copyright <i class="fa fa-copyright" aria-hidden="true"></i>
+                                 <span id="anoCopy">2021</span>, <a href="http://osas.com.br/">Osas</a> - Todos os direitos reservados.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Aceite cookies -->
+               <!-- 
+                  <div class="mt-cookie-consent-bar">
+                          <div class="container">
+                              <div class="mt-cookie-consent-bar-holder">
+                                  <div class="mt-cookie-consent-bar-content">Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site
+                                      <a href="http://www.allaboutcookies.org/cookies/" target="_blank">O que é cookie ?</a>
+                                      
+                                  </div>
+                                  <div class="mt-cookie-consent-bar-action">
+                                      <a href="javascript:;" class="mt-cookie-consent-btn btn btn-circle green">Ok</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
+            </div>
+            <!-- END : LOGIN PAGE 5-1 -->
+         </body>
+         <script src="js/defaultcad.js"></script>
+      </html>
+

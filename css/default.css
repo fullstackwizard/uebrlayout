@@ -1,0 +1,299 @@
+.login-page {
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(134, 142, 151, 1)
+}
+
+.login-page .bs-reset {
+    margin: 0;
+    padding: 0
+}
+
+.login-page .text-right {
+    text-align: right
+}
+
+.login-page .login-bg {
+    background-color: rgba(255, 255, 255, 0);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh
+}
+
+.login-page .custom-logo {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    max-height: 150px
+}
+
+.login-page .login-logo {
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    width: 20vw
+}
+
+.login-page .login-logo.login-6 {
+    top: 80px;
+    left: 80px
+}
+
+.login-page .img-container {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.login-page .login-container {
+    position: relative;
+    min-height: 100vh;
+    margin-left: 50%
+}
+
+.login-page .login-content,
+.login-page .login-container .login-copyright {
+    padding: 0 80px
+}
+
+.login-page .login-content {
+    margin: 15vh auto;
+    width: 450px;
+    padding: 0 15px
+}
+
+.login-page .login-content p,
+.login-page .login-content span,
+.login-page .login-content small,
+.login-page .login-content h1,
+.login-page .login-content h2,
+.login-page .login-content h3,
+.login-page .login-content h4 {
+    color: #a0a9b4
+}
+
+.login-page .login-content h1 {
+    font-size: 30px;
+    font-weight: 300
+}
+
+.login-page .login-content p {
+    font-size: 15px;
+    line-height: 22px
+}
+
+.login-page .login-content .login-form {
+    margin-top: 80px;
+    color: rgba(134, 142, 151, 1);
+    font-size: 13px
+}
+
+.login-page .login-content .login-form .form-control {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #a0a9b4;
+    color: rgba(134, 142, 151, 1);
+    font-size: 14px;
+    margin-bottom: 30px;
+    border-radius: 0 !important
+}
+
+.login-page .login-content .login-form .form-control:focus {
+    outline: 0
+}
+
+.login-page .login-content .login-form .input-group {
+    width: 100%
+}
+
+.login-page .login-content .login-form .input-group .input-group-addon {
+    background: #fff;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    z-index: 9;
+    top: 4px
+}
+
+.login-page .login-content .login-form .input-group .form-control {
+    padding-left: 30px
+}
+
+.login-page .fileinput-button {
+    width: 100%
+}
+
+.login-page .btn.btn-login {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(45, 130, 50, 1)
+}
+
+.login-page .btn.btn-qrcode {
+    padding: 7px 5px 7px 5px;
+    box-shadow: none !important
+}
+
+.login-page .btn.btn-qrcode span {
+    font-size: 24px;
+    float: left;
+    color: rgba(45, 130, 50, 1)
+}
+
+.login-page .btn.btn-licenca {
+    color: rgba(45, 130, 50, 1);
+    border-color: rgba(45, 130, 50, 1);
+    background: rgba(255, 255, 255, 1)
+}
+
+.login-page .btn.btn-licenca:hover {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(45, 130, 50, 1)
+}
+
+.login-page .link-forget-password,
+.login-page .link-cadastrar-se {
+    color: rgba(45, 130, 50, 1);
+    text-decoration: none
+}
+
+.login-page .link-forget-password:hover,
+.login-page .link-cadastrar-se:hover {
+    text-decoration: underline
+}
+
+.login-page .login-content .login-form .login-button {
+    display: inline-block
+}
+
+.login-page .login-content .login-form .rem-password {
+    margin-top: 10px
+}
+
+.login-page .login-content .login-form .rem-password p {
+    margin: 0
+}
+
+.login-page .login-content .login-form .rem-password .rem-checkbox {
+    border-color: rgba(134, 142, 151, 1)
+}
+
+.login-page .login-container .login-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px
+}
+
+.login-page .login-copyright a {
+    color: rgba(134, 142, 151, 1)
+}
+
+.login-page .login-container .login-footer .login-copyright {
+    padding-left: 0;
+    margin-top: 6px
+}
+
+.login-page .login-container .login-footer .login-copyright p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(134, 142, 151, 1)
+}
+
+.login-page .form-group.has-error {
+    border-bottom: 2px solid #ed6b75 !important
+}
+
+.login-page .form-group.valid {
+    border-bottom: 1px solid #a0a9b4 !important
+}
+
+@media(max-width:1365px) {
+    .login-page .login-logo.login-6 {
+        top: 40px;
+        left: 40px
+    }
+    .login-page .login-content,
+    .login-page .login-container .login-copyright {
+        padding: 0 40px
+    }
+    .login-page .login-container .login-copyright {
+        padding-left: 0
+    }
+}
+
+@media(max-width:993px) {
+    .login-page {
+        min-height: 50vh
+    }
+    .login-page .login-logo {
+        top: 5px;
+        left: 40vw
+    }
+    .login-page .custom-logo {
+        max-height: 100px
+    }
+    .login-page .mt-login-5-bsfix {
+        width: 100%
+    }
+    .login-page .img-container {
+        max-height: 30vh
+    }
+    .login-page .login-bg {
+        min-height: 30vh
+    }
+    .login-page .login-logo.login-6 {
+        position: relative;
+        margin: 0 0 40px 0
+    }
+    .login-page .img-container {
+        position: initial
+    }
+    .login-page .login-container {
+        margin-left: 0;
+        min-height: 50vh
+    }
+    .login-page .login-content {
+        margin: 10px auto;
+        padding: 0 15px;
+        width: 450px
+    }
+    .login-page .login-content .login-form {
+        margin-top: 40px
+    }
+    .login-page .login-container .rem-password {
+        margin-bottom: 1em
+    }
+    .login-page .login-container .login-footer {
+        position: relative;
+        margin-top: 40px;
+        padding-bottom: 0
+    }
+}
+
+@media(max-width:768px) {
+    .login-page .login-content {
+        margin: 10px auto;
+        padding: 0 15px;
+        width: 450px
+    }
+    .login-page .login-content .text-right {
+        text-align: right
+    }
+    .login-page .img-container {
+        max-height: 15vh
+    }
+    .login-page .login-bg {
+        min-height: 15vh
+    }
+}
+
+@media(max-width:500px) {
+    .login-page .login-content {
+        margin: 10px 0;
+        padding: 0 5vw;
+        width: 100%
+    }
+}
