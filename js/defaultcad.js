@@ -1,3 +1,5 @@
+"use strict";
+
 // Formatação de CPF/CNPJ RegEX 
 
 function formatarCampo(campoTexto) {
@@ -17,32 +19,35 @@ function mascaraCnpj(valor) {
     return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
 }
 
-// FIM Formatação de CPF/CNPJ RegEX 
+// FIM 
 
-// Mascara Telefone 
+ 
 
-/* Máscaras ER */
+// Valida E-mail 
 
-function mascara(o,f){
-    v_obj=o
-    v_fun=f
-    setTimeout("execmascara()",1)
-}
-function execmascara(){
-    v_obj.value=v_fun(v_obj.value)
-}
-function mtel(v){
-    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
-    return v;
-}
-function id( el ){
-	return document.getElementById( el );
-}
-window.onload = function(){
-	id('txtContato').onkeyup = function(){
-		mascara( this, mtel );
-	}
-}
+function validarEmail(){
+    var email = document.querySelector('#txtEmail');
+    var error = document.querySelector('#error-email');
+    var label = document.querySelector('#labelEmail');
+    if(!email.checkValidity()){
+      
+      error.style.display = 'flex';
+      label.style.top = '0';
+      label.style.fontSize = '13px';
+
+    } else {
+        error.style.display = 'none';
+        label.style.top = '0';
+        label.style.fontSize = '13px';
+           }
+     
+  }
+  
+  // FIM 
+
+  
+  // valida TELEFONE 
+
+ 
+
 

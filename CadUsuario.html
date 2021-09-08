@@ -42,6 +42,7 @@
             <link rel="stylesheet" href="css/bootstrap-switch.css">
             <link rel="stylesheet" href="css/metronic2.css">
             <link rel="stylesheet" href="css/default2.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <style>
                .form-group.form-md-line-input {
                margin-bottom: 10px !important;
@@ -57,6 +58,16 @@
                #hlCadastrarse{
                font-size: 1.8rem;
                }
+
+              
+                              .form-group.form-md-line-input.form-md-floating-label .form-control:focus ~ .labelControl,
+                              .form-group.form-md-line-input.form-md-floating-label .form-control:valid ~ .labelControl
+                              {
+                              top:0;
+                              font-size:13px
+                              }
+                          
+
             </style>
          </head>
          <!-- END HEAD -->
@@ -72,276 +83,101 @@
                <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
                   <div class="login-content" style="width:100%">
                      <img id="ImgLogo" class="custom-logo" src="img/LogoEllos.jpg" />
-                     <div id="Grid-Login" class="login-form" style="display: none;">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <div class="alert alert-danger display-hide">
-                                 <button class="close" data-close="alert"></button>
-                                 <span>Preencha os usuário e senha para entar no sistema</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-xs-12">
-                              <div class="input-group">
-                                 <span class="input-group-addon">
-                                 <i class="fa fa-user"></i>
-                                 </span>
-                                 <input name="txtUsuario" type="text" id="txtUsuario" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Usuário" autocomplete="off" required="required" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;txtSenha&#39;).click();return false;}} else {return true}; " />
-                              </div>
-                           </div>
-                           <div class="col-xs-12">
-                              <div class="input-group">
-                                 <span class="input-group-addon">
-                                 <i class="fa fa-lock"></i>
-                                 </span>
-                                 <input name="txtSenha" type="password" id="txtSenha" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Senha" autocomplete="off" required="required" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;btnLogin&#39;).click();return false;}} else {return true}; " />
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-xs-12 col-sm-6 col-md-5">
-                              <div class="rem-password">
-                                 <label class="rememberme mt-checkbox mt-checkbox-outline">
-                                 <input id="chkRememberMe" type="checkbox" name="chkRememberMe" />
-                                 Manter Conectado
-                                 <span></span>
-                                 </label>
-                              </div>
-                           </div>
-                           <div class="col-xs-12 col-sm-6 col-md-7 text-right">
-                              <a id="btnQrCode" class="btn btn-qrcode "><span class="fa fa-qrcode"></span></a>
-                              <input type="submit" name="btnLogin" value="Entrar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnLogin" class="btn btn-login" />
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-xs-2"></div>
-                           <div class="col-xs-10 text-right">
-                              <a id="HyperLink1" class="link-forget-password">Não lembro minha senha</a>
-                              <br />
-                              <a href="CadUsuario.html" id="hlCadastrarse" class="link-cadastrar-se">Não sou cadastrado</a>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-xs-12 text-center">
-                           </div>
-                        </div>
-                     </div>
-                     <div id="Grid-QrCode" class="login-form" style="display: none">
-                        <h3 class="font-green">Acesso Ellos Mobile</h3>
-                        <div class="row">
-                           <div class="col-xs-12">
-                              <img src="#" id="imgQrCode" style="display: none" />
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-md-12 text-right">
-                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
-                           </div>
-                        </div>
-                     </div>
-                     <div id="Grid-ForgetPassword" class="login-form" style="display: none;">
-                        <h3 class="font-green">Recuperar senha</h3>
-                        <div class="row">
-                           <div class="col-xs-12">
-                              <div class="input-group">
-                                 <span class="input-group-addon">
-                                 <i class="fa fa-user"></i>
-                                 </span>
-                                 <input name="txtRecuperarUsuario" type="text" id="txtRecuperarUsuario" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="Usuário" autocomplete="off" required="required" />
-                              </div>
-                           </div>
-                           <div class="col-xs-12">
-                              <div class="input-group">
-                                 <span class="input-group-addon">
-                                 <i class="fa fa-lock"></i>
-                                 </span>
-                                 <input name="txtRecuperarEmail" type="email" id="txtRecuperarEmail" class="form-control form-control-solid placeholder-no-fix form-group" placeHolder="E-mail" autocomplete="off" required="required" />
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-md-12 text-right">
-                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
-                              <input type="submit" name="btnRecuperarSenha" value="Enviar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnRecuperarSenha&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnRecuperarSenha" class="btn btn-login" />
-                           </div>
-                        </div>
-                     </div>
-                     <div id="Grid-TrocarSenha" class="login-form" style="display: none;">
-                        <h3 class="font-green">Trocar senha</h3>
-                        <div class="row">
-                           <div class="col-md-12">
-                              <input name="txtNovoPassword" id="txtNovoPassword" class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeHolder="Senha" />
-                           </div>
-                           <div class="col-md-12">
-                              <input name="txtRepetirNovoPassword" id="txtRepetirNovoPassword" class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeHolder="Repetir senha" />
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-md-12">
-                              <button type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
-                              <input type="submit" name="btnSalvarNovoPassword" value="Salvar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSalvarNovoPassword&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSalvarNovoPassword" class="btn btn-login" />
-                           </div>
-                        </div>
-                     </div>
+                     
+                     
                      <div id="Grid-Cadastrarse" class="login-form" style="">
                         <h3 class="font-green">Cadastro de Usuário</h3>
                         <div class="row">
-                           <div class="col-md-12">
-                              <span id="Label8">Tipo Escolar</span>
-                              <div class="mt-radio-inline js-container-tipo-pessoa">
-                                 <label class="mt-radio">
-                                 Ensino Médio
-                                 <input id="rbtTipoPessoaF" type="radio" name="tipoPessoa" value="rbtTipoPessoaF" checked="checked" />
-                                 <span></span>
-                                 </label>
-                                 <label class="mt-radio">
-                                 Ensino Superior
-                                 <input id="rbtTipoPessoaJ" type="radio" name="tipoPessoa" value="rbtTipoPessoaJ" />
-                                 <span></span>
-                                 </label>
-                              </div>
-                           </div>
-                           <style>
-                              .form-group.form-md-line-input.form-md-floating-label .form-control:focus ~ .labelControl,
-                              .form-group.form-md-line-input.form-md-floating-label .form-control:valid ~ .labelControl
-                              {
-                              top:0;
-                              font-size:13px
-                              }
-                           </style>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtNome" type="text" id="txtNome" class="form-control" />
-                                 <label class="labelControl" for="txtNome">Nome</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtLogin" type="text" id="txtLogin" class="form-control" />
-                                 <label class="labelControl" for="txtLogin">Login</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtPassword" id="txtPassword" class="form-control" type="password" autocomplete="off" />
-                                 <label class="labelControl" for="txtPassword">Senha</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtRepetirPassword" id="txtRepetirPassword" class="form-control" type="password" autocomplete="off" />
-                                 <label class="labelControl" for="txtRepetirPassword">Repetir Senha</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtCpf" type="text" id="txtCpf" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" class="form-control" autocomplete="off" maxlength="14" />
-                                 <label class="labelControl" id="labelCpfCnpj">CPF</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtEmail" id="txtEmail" class="form-control" type="email" />
-                                 <label class="labelControl" for="txtEmail">E-mail</label>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group form-md-line-input form-md-floating-label">
-                                 <input required name="txtContato" type="text" id="txtContato" class="form-control" maxlength="15" />
-                                 <label class="labelControl" for="txtContato">Contato</label>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row js-container-endereco" style="display: none;">
-                           <div class="col-xs-12">
-                              <div class="row">
-                                 <div class="col-md-12">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtNomeEndereco" type="text" id="txtNomeEndereco" class="form-control" />
-                                       <label for="txtContato">Nome endereço</label>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-sm-5 col-md-3">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtCep" type="text" id="txtCep" class="form-control" />
-                                       <label for="txtCep">CEP</label>
-                                       <input name="idBairro" type="text" id="idBairro" style="display: none;" />
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-7 col-md-5">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtEndereco" type="text" id="txtEndereco" class="form-control" />
-                                       <label for="txtEndereco">Endereço</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtNumero" type="number" id="txtNumero" class="form-control" />
-                                       <label for="txtNumero">Número</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-3">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtBairro" type="text" id="txtBairro" disabled="disabled" class="aspNetDisabled form-control" />
-                                       <label for="txtBairro">Bairro</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-5">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtCidade" type="text" id="txtCidade" disabled="disabled" class="aspNetDisabled form-control" />
-                                       <label for="txtCidade">Cidade</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-4">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtEstado" type="text" id="txtEstado" disabled="disabled" class="aspNetDisabled form-control" />
-                                       <label for="txtEstado">Estado</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtComplemento" type="text" id="txtComplemento" class="form-control" />
-                                       <label for="txtComplemento">Complemento</label>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <div class="form-group form-md-line-input form-md-floating-label">
-                                       <input name="txtReferencia" type="text" id="txtReferencia" class="form-control" />
-                                       <label for="txtReferencia">Referência</label>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row js-container-anexo" style="display: none;">
-                           <div class="col-xs-12">
+
+                           <form id="form" method="post">
                               <div class="col-md-12">
-                                 <div class="form-group form-md-line-input has-info">
-                                    <span class="btn fileinput-button">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                    <span>Add Anexo</span>
-                                    <input type="file" name="fileAnexo" id="fileAnexo" accept=".png, .jpg, .jpeg .pdf" />
-                                    </span>
-                                    <span id="rexp" style="visibility:hidden;">Apenas Imagens e arquivos pdf</span>
+                                 <span id="Label8">Tipo Ensino</span>
+                                 <div class="mt-radio-inline js-container-tipo-pessoa">
+                                    <label class="mt-radio">
+                                    Ensino Médio
+                                    <input id="ensinoMedio" type="radio" value="Ensino Medio" name="tipoEnsino"  checked="checked" />
+                                    <span></span>
+                                    </label>
+                                    <label class="mt-radio">
+                                    Ensino Superior
+                                    <input id="ensinoSuperior" type="radio" value="Ensino Superior" name="tipoEnsino" />
+                                    <span></span>
+                                    </label>
                                  </div>
+                              </div>
+                           
+                          
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtNome" type="text" id="txtNome" class="form-control" />
+                                    <label class="labelControl" for="txtNome">Nome</label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtLogin" type="text" id="txtLogin" class="form-control" />
+                                    <label class="labelControl" for="txtLogin">Login</label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtPassword" id="txtPassword" class="form-control" type="password" autocomplete="off" />
+                                    <label class="labelControl" for="txtPassword">Senha</label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtRepetirPassword" id="txtRepetirPassword" class="form-control" type="password" autocomplete="off" />
+                                    <label class="labelControl" for="txtRepetirPassword">Repetir Senha</label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtCpf" type="text" id="txtCpf" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" class="form-control" autocomplete="off" maxlength="14" />
+                                    <label class="labelControl" id="labelCpfCnpj">CPF</label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6">
+                                 <style>
+                                   
+                                 </style>
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input  name="txtEmail" id="txtEmail" class="form-control" type="email" onblur="validarEmail()"  required />
+                                    <label class="labelControl" for="txtEmail" id="labelEmail">E-mail</label> 
+                                 </div>
+                                 
+                              </div>
+                              <div class="col-sm-6">
+                                 <div class="form-group form-md-line-input form-md-floating-label">
+                                    <input required name="txtContato" type="text" id="txtContato" class="form-control" maxlength="15" />
+                                    <label class="labelControl" for="txtContato">Contato</label>
+                                 </div>
+                              </div>
+                             
+                              <div class="col-sm-6">
+                                 <div id="error-email" class="alert alert-danger" role="alert" style="display: none">
+                                    E-mail Inválido
+                                  </div>
+                              </div>
+                            
+                           </div>
+                           <div class="col-md-12 ">
+                              <div class="alert alert-warning">
+                                 <strong>Confirmação! </strong>Você receberá um email com os dados de acesso.
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12 text-right">
+                                 <button href="index.html" type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
+                                 <input type="submit" name="btnSalvarUsu" value="Salvar" id="btnSalvarUsu" class="btn btn-login" />
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-12 ">
-                           <div class="alert alert-warning">
-                              <strong>Confirmação! </strong>Você receberá um email com os dados de acesso.
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-md-12 text-right">
-                              <button href="index.html" type="button" class="btn blue btn-outline btn-back-login">Voltar</button>
-                              <input type="submit" name="btnSalvarUsu" value="Salvar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSalvarUsu&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSalvarUsu" class="btn btn-login" />
-                           </div>
-                        </div>
-                     </div>
+                           </form>
+                           
+                        
+                        
+                        
                   </div>
                   <div class="login-footer">
                      <div class="row bs-reset">
@@ -378,5 +214,7 @@
             <!-- END : LOGIN PAGE 5-1 -->
          </body>
          <script src="js/defaultcad.js"></script>
+         <script src="js/api.js"></script>
+         
       </html>
 
